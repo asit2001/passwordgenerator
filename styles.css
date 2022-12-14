@@ -1,0 +1,303 @@
+
+:root{
+    --green: #a5f3aa;
+    --sky-blue : #43e5f7;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+  } 
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:linear-gradient(to bottom,#14131b,#0a090e) ;
+  }
+  
+  .main-div {
+    height: 70vh;
+    width: 30vw;
+    
+  }
+  
+  .main-div h2 {
+    text-align: center;
+    color: #716E7F;
+    margin: 0 0 10px 0;
+  }
+  
+  .password-filed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 50px;
+    background-color: #24232B;
+  
+  }
+  .pass{
+    border: none;
+    outline: none;
+    background-color: transparent !important;
+    font-size: 1.9rem;
+    margin-left: 20px;
+    width: 90%;
+  }
+  #copy{
+    color: var(--green);
+    font-size: 1.6rem !important;
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #302f36;
+  }
+  #copy:hover{
+    color: #fff;
+  }
+  .controls{
+    background-color: #24232B;
+    color: white;
+    padding: 20px;
+  }
+  .text{
+    font-size: 1.25rem;
+  }
+  .level{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .t-right{
+    color: var(--green);
+    font-size: 1.9rem;
+  }
+  .input-div input{
+    margin-left: 8px;
+    width: calc(100% - 20px);
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #1d1c25;
+    background-image: linear-gradient(to right,var(--green),var(--green));
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    margin-bottom: 20px;
+  }
+  input[type=range]:focus{
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-webkit-slider-thumb{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: -8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    transition: background .3s ease-in-out;
+  }
+  
+  input[type=range]::-webkit-slider-thumb:active{
+    border: 2px solid var(--green);
+    background-color: #0a090e;
+  }
+  
+  
+  /* firefox*/
+  input[type=range]::-moz-slider-runnable-track {
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-top: -8px;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    transition: background .3s ease-in-out;
+  }
+  input[type=range]::-moz-range-thumb:active{
+    border: 2px solid var(--green);
+    background-color: #0a090e;
+  }
+  
+  /*  */
+  
+  .input-options{
+    display: flex;
+    flex-direction: column;
+  }
+  .pd-10{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.25rem;
+    align-items: center;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  input[type="checkbox"] + label{
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+    color: #666;
+    line-height: 25px;
+  }
+  input[type="checkbox"] + label::before{
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    outline: 2px solid white;
+  }
+  input[type="checkbox"]:checked + label::before{
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    outline: 2px solid var(--green);
+  }
+  input[type="checkbox"]:hover + label::before{
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    outline: 2px solid var(--green);
+  }
+  input[type="checkbox"]:checked + label::after{
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: var(--green);
+    outline: 2px solid var(--green);
+    background-image: url(../img/check.svg);
+    background-size: contain;
+    transform: scale(1);
+    opacity: 1;
+    transition: all .3s ease;
+  }
+  input[type="checkbox"]:not(:checked) + label::after{
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: var(--green);
+    outline: 2px solid var(--green);
+    background-image: url(../check.svg);
+    background-size: contain;
+    transform: scale(0);
+    opacity: 0;
+  }
+  
+  label{
+    color: #fff !important;
+  }
+  
+  
+  .text-in{
+    margin-left: 25px;
+  }
+  
+  .strength {
+    display: flex;
+    padding: 20px;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1922;
+  }
+  .strength-text{
+    color: #fff;
+    opacity: 0.6;
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+  .left{
+    display: flex;
+  }
+  .box{
+    width: 8px;
+    height: 1.6rem;
+    border: 2px white solid;
+    margin-left:5px;
+  }
+  .left #power{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  .btn{
+    margin: 30px 0 15px 0;
+  }
+  .btn button{
+    width: 100%;
+    padding: 20px;
+    background: transparent;
+    border: 3px solid var(--green);
+    font-family: 'Space Mono', monospace;
+    color: var(--green);
+    font-size: 1.025rem;
+    cursor: pointer;
+    transition: all ease 0.3s;
+  }
+  .btn button:active{
+    background-color: rgba(134, 193, 140, 0.5);
+  }
+  .box.active{
+    background-color: var(--green);
+    border-color: var(--green);
+  }
+  
+  @media only screen and (max-width:480px) {
+    html{
+      font-size: 14px;
+    }
+    .main-div {
+      height: auto;
+      width: 90vw;
+    }
+    .pass{
+      font-size: 1.23rem;
+    }
+    #power{
+      display: none;
+    }
+  }
+  @media only screen and (max-width:1024px) and (min-width:500px) {
+    .main-div {
+      width: 60vw;
+      
+    }
+  }
